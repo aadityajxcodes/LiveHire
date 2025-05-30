@@ -1,0 +1,371 @@
+.report-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.report-header {
+  text-align: center;
+  background: linear-gradient(to right, #0057b7, #0077CC);
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.report-header h1 {
+  color: white;
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.report-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin: 5px 0 0;
+}
+
+.report-content {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.report-section {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.report-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.report-section h2 {
+  color: #0057b7;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.candidate-info {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.candidate-profile {
+  margin-right: 1.5rem;
+}
+
+.candidate-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0057b7;
+}
+
+.candidate-details {
+  flex: 1;
+}
+
+.candidate-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+}
+
+.detail-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #555;
+  width: 180px;
+  min-width: 180px;
+}
+
+.detail-value {
+  flex: 1;
+}
+
+.score-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.score-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.score-excellent {
+  background-color: #43a047;
+}
+
+.score-good {
+  background-color: #7cb342;
+}
+
+.score-average {
+  background-color: #ffb300;
+}
+
+.score-poor {
+  background-color: #f4511e;
+}
+
+.skills-assessment {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #0057b7;
+}
+
+.skill-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #0057b7;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.skill-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.rating-stars {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.star {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-right: 2px;
+}
+
+.star.empty {
+  color: #e0e0e0;
+}
+
+.rating-label {
+  font-weight: 500;
+  color: #555;
+}
+
+.feedback-box {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-left: 4px solid #0057b7;
+}
+
+.feedback-quote {
+  font-style: italic;
+  color: #555;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 1rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid #ddd;
+}
+
+.recommendation {
+  margin-top: 2rem;
+}
+
+.recommendation-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.hire-strong {
+  background-color: #43a047;
+}
+
+.hire {
+  background-color: #7cb342;
+}
+
+.consider {
+  background-color: #ffb300;
+}
+
+.decline {
+  background-color: #f4511e;
+}
+
+.code-sample {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+
+.code-sample pre {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+}
+
+.action-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.primary-btn {
+  background-color: #0057b7;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 87, 183, 0.2);
+}
+
+.primary-btn:hover {
+  background-color: #004694;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 87, 183, 0.25);
+}
+
+.secondary-btn {
+  background-color: white;
+  color: #0057b7;
+  border: 1px solid #0057b7;
+}
+
+.secondary-btn:hover {
+  background-color: #f0f7ff;
+  transform: translateY(-2px);
+}
+
+.actions-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .report-container {
+    padding: 10px;
+  }
+  
+  .report-header {
+    padding: 20px;
+  }
+  
+  .report-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .report-header p {
+    font-size: 0.9rem;
+  }
+  
+  .report-content {
+    padding: 1.5rem;
+  }
+  
+  .candidate-info {
+    flex-direction: column;
+  }
+  
+  .candidate-profile {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+  }
+  
+  .detail-label {
+    width: 100%;
+    margin-bottom: 0.3rem;
+  }
+  
+  .skills-assessment {
+    grid-template-columns: 1fr;
+  }
+  
+  .score-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .score-title {
+    margin-bottom: 1rem;
+  }
+  
+  .action-btn {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .actions-container {
+    flex-direction: column;
+  }
+} 

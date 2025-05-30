@@ -1,0 +1,61 @@
+/* Global styles for LiveHire */
+
+body {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Apply consistent card styling */
+.MuiPaper-root, .MuiCard-root {
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+/* Consistent button styling */
+.MuiButton-root {
+  text-transform: none !important;
+  border-radius: 8px !important;
+}
+
+/* LiveHire blue color for primary elements */
+.live-hire-blue {
+  color: #0057b7;
+}
+
+.live-hire-background {
+  background-color: #0057b7;
+  color: white;
+}
+
+/* Improve table styling */
+.MuiTableCell-head {
+  font-weight: 600 !important;
+  background-color: #f5f7fa !important;
+}
+
+/* Ensure links don't have the default underline */
+a {
+  text-decoration: none;
+  color: #0057b7;
+}
+
+/* Add smooth transitions for interactive elements */
+.MuiPaper-root, .MuiCard-root, .MuiButton-root {
+  transition: all 0.3s ease !important;
+}
+
+/* Improve status chips */
+.MuiChip-root {
+  font-weight: 500 !important;
+}
+
+/* Container padding for mobile devices */
+@media (max-width: 600px) {
+  .MuiContainer-root {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+} 

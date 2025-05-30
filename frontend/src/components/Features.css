@@ -1,0 +1,43 @@
+.features-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5f9ff; /* Light blue background */
+  }
+  
+  .features-title {
+    font-size: 32px;
+    color: #0056b3; /* Dark Blue */
+    margin-bottom: 30px;
+  }
+  
+  .features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .feature-card {
+    background: #ffffff;
+    padding: 25px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+  
+  .feature-card h3 {
+    font-size: 22px;
+    color: #0056b3; /* Darker Blue */
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 16px;
+    color: #0056b3; 
+  }

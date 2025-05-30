@@ -1,0 +1,207 @@
+.interviewer-signup-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.interviewer-signup-left {
+    width: 50%;
+    background: #0057b7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.interviewer-signup-image {
+    width: 65%;
+    max-width: none;
+    object-fit: contain;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.interviewer-signup-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f7fa;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.interviewer-signup-card {
+    width: 70%;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.interviewer-signup-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #0057b7;
+    text-align: center;
+}
+
+.interviewer-signup-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.interviewer-signup-input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.interviewer-signup-input-group label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.interviewer-signup-input-group input,
+.interviewer-signup-input-group select {
+    padding: 0.875rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    background: white;
+    transition: all 0.3s ease;
+    color: #333;
+    width: 100%;
+}
+
+.interviewer-signup-input-group input::placeholder {
+    color: #999;
+    font-size: 0.95rem;
+}
+
+.interviewer-signup-input-group input:focus,
+.interviewer-signup-input-group select:focus {
+    outline: none;
+    border-color: #0057b7;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 87, 183, 0.1);
+}
+
+.interviewer-signup-input-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+.interviewer-signup-button {
+    width: 100%;
+    padding: 0.875rem;
+    background-color: #0057b7;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.interviewer-signup-button:hover {
+    background-color: #004494;
+}
+
+.interviewer-signup-login {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: #666;
+    text-align: center;
+}
+
+.interviewer-signup-login span {
+    color: #0057b7;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 0.3rem;
+    text-decoration: none;
+}
+
+.interviewer-signup-login span:hover {
+    text-decoration: underline;
+}
+
+/* Custom scrollbar styles */
+.interviewer-signup-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.interviewer-signup-card::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.interviewer-signup-card::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.interviewer-signup-card::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+@media (max-width: 1200px) {
+    .interviewer-signup-card {
+        width: 80%;
+    }
+    
+    .interviewer-signup-image {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .interviewer-signup-container {
+        flex-direction: column;
+    }
+
+    .interviewer-signup-left {
+        width: 100%;
+        min-height: 25vh;
+        padding: 0;
+    }
+
+    .interviewer-signup-right {
+        width: 100%;
+        min-height: 75vh;
+        padding: 1rem;
+    }
+
+    .interviewer-signup-card {
+        width: 90%;
+        max-width: 400px;
+        padding: 1.5rem;
+        margin: 0;
+    }
+    
+    .interviewer-signup-image {
+        width: 90%;
+        max-width: 400px;
+    }
+} 

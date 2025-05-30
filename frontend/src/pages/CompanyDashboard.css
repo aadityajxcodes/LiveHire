@@ -1,0 +1,367 @@
+/* CompanyDashboard specific styles */
+
+.company-dashboard-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  background-color: #f5f7fa;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Loading and Error States */
+.loading-state,
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  background: white;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loading-state p {
+  color: #0057b7;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.error-state p {
+  color: #d32f2f;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Header styling */
+.dashboard-header {
+  text-align: center;
+  background: linear-gradient(to right, #0057b7, #0077CC);
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.dashboard-header p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+}
+
+/* Stats cards styling */
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+  width: 100%;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 0; /* Allows flex items to shrink below content size */
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h3 {
+  color: #0057b7;
+  margin-top: 0;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0 0;
+}
+
+/* Interviews section */
+.interviews-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  color: #0057b7;
+  margin: 0;
+}
+
+/* Table styling */
+.interview-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Fixed table layout for better control */
+}
+
+.interview-table th,
+.interview-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eeeeee;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.interview-table th {
+  background-color: #f5f7fa;
+  font-weight: bold;
+  color: #333;
+}
+
+.interview-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-confirmed {
+  background-color: #e3f2fd;
+  color: #0057b7;
+}
+
+.status-pending {
+  background-color: #fff8e1;
+  color: #ff8f00;
+}
+
+.status-completed {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-scheduled {
+  background-color: #f5f5f5;
+  color: #616161;
+}
+
+/* Interviewer cards */
+.interviewers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.interviewer-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #eee;
+}
+
+.interviewer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.interviewer-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.interviewer-info {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.interviewer-info h3 {
+  margin-top: 0;
+  color: #0057b7;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  margin: 5px 0 10px;
+}
+
+.star-icon {
+  color: #FFD700;
+  margin-right: 5px;
+}
+
+.schedule-btn {
+  background-color: #0057b7;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.schedule-btn:hover {
+  background-color: #003d82;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 40px 0;
+  color: #757575;
+}
+
+.empty-state p {
+  margin-bottom: 1rem;
+}
+
+/* Action buttons */
+.action-btn {
+  background-color: #0057b7;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #003d82;
+}
+
+.detail-btn {
+  background-color: white;
+  color: #0057b7;
+  border: 1px solid #0057b7;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.detail-btn:hover {
+  background-color: #0057b7;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .interviewers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .stats-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .stat-card {
+    flex-basis: calc(33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .company-dashboard-container {
+    padding: 10px;
+  }
+  
+  .stats-container {
+    flex-direction: column;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .interview-table {
+    font-size: 0.9rem;
+  }
+  
+  .interview-table th:nth-child(4),
+  .interview-table td:nth-child(4) {
+    display: none;
+  }
+  
+  .interviewers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Set explicit widths for table columns to fit content appropriately */
+.interview-table th:nth-child(1),
+.interview-table td:nth-child(1) {
+  width: 15%;
+}
+
+.interview-table th:nth-child(2),
+.interview-table td:nth-child(2) {
+  width: 20%;
+}
+
+.interview-table th:nth-child(3),
+.interview-table td:nth-child(3) {
+  width: 12%;
+}
+
+.interview-table th:nth-child(4),
+.interview-table td:nth-child(4) {
+  width: 10%;
+}
+
+.interview-table th:nth-child(5),
+.interview-table td:nth-child(5) {
+  width: 15%;
+}
+
+.interview-table th:nth-child(6),
+.interview-table td:nth-child(6) {
+  width: 12%;
+}
+
+.interview-table th:nth-child(7),
+.interview-table td:nth-child(7) {
+  width: 16%;
+} 

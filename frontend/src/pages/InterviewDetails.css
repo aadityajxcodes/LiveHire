@@ -1,0 +1,271 @@
+.interview-details-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.interview-details-header {
+  text-align: center;
+  background: linear-gradient(to right, #0057b7, #0077CC);
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.interview-details-header h1 {
+  color: white;
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.interview-details-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin: 5px 0 0;
+}
+
+.interview-content {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.detail-section {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.detail-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.detail-section h2 {
+  color: #0057b7;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.detail-section p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.detail-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #555;
+  width: 180px;
+  min-width: 180px;
+}
+
+.detail-value {
+  flex: 1;
+}
+
+.detail-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #0057b7;
+}
+
+.detail-card h3 {
+  color: #0057b7;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.status-pill.confirmed {
+  background-color: #e3f2fd;
+  color: #0057b7;
+}
+
+.status-pill.pending {
+  background-color: #fff8e1;
+  color: #ff8f00;
+}
+
+.status-pill.completed {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-pill.cancelled {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.timer-box {
+  background: linear-gradient(to right, #0057b7, #0077CC);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 87, 183, 0.2);
+}
+
+.timer-box h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.timer-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.skill-tag {
+  background-color: #e3f2fd;
+  color: #0057b7;
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.action-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.primary-btn {
+  background-color: #0057b7;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 87, 183, 0.2);
+}
+
+.primary-btn:hover {
+  background-color: #004694;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 87, 183, 0.25);
+}
+
+.secondary-btn {
+  background-color: white;
+  color: #0057b7;
+  border: 1px solid #0057b7;
+}
+
+.secondary-btn:hover {
+  background-color: #f0f7ff;
+  transform: translateY(-2px);
+}
+
+.back-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-btn:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.actions-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .interview-details-container {
+    padding: 10px;
+  }
+  
+  .interview-details-header {
+    padding: 20px;
+  }
+  
+  .interview-details-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .interview-details-header p {
+    font-size: 0.9rem;
+  }
+  
+  .interview-content {
+    padding: 1.5rem;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+  }
+  
+  .detail-label {
+    width: 100%;
+    margin-bottom: 0.3rem;
+  }
+  
+  .action-btn {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .actions-container {
+    flex-direction: column;
+  }
+} 

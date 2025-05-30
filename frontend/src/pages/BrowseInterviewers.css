@@ -1,0 +1,89 @@
+.browse-interviewers-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  margin-bottom: 2rem;
+  color: #0057b7;
+}
+
+.filters-section {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.interviewers-grid {
+  margin-top: 2rem;
+}
+
+.interviewer-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+}
+
+.interviewer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interviewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.skill-chip {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.bio {
+  margin: 1rem 0;
+  color: #666;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 3; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  color: #666;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .browse-interviewers-container {
+    padding: 1rem;
+  }
+
+  .filters-section {
+    padding: 1rem;
+  }
+
+  .interviewer-card {
+    margin-bottom: 1rem;
+  }
+} 

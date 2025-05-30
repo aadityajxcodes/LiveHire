@@ -1,0 +1,288 @@
+ /* .company-login-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .company-login-left {
+    flex: 1;
+    background-color: #0077B5; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .company-login-image {
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .company-login-right {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .company-login-title {
+    font-size: 24px;
+    color: #0077B5;
+    margin-bottom: 20px;
+  }
+  
+  .company-login-form {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .company-login-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .company-login-field label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .company-login-field input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .company-login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0077B5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .company-login-signup {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .company-login-signup span {
+    color: #0077B5;
+    cursor: pointer;
+    font-weight: bold;
+  }  */
+
+
+.company-login-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.company-login-left {
+    width: 50%;
+    background: #0057b7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.company-login-image {
+    width: 65%;
+    max-width: none;
+    object-fit: contain;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.company-login-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f7fa;
+    padding: 0;
+    margin: 0;
+}
+
+.company-login-card {
+    width: 70%;
+    background: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.company-login-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #0057b7;
+    text-align: center;
+}
+
+.company-login-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.company-login-input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.company-login-input-group label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.company-login-input-group input {
+    padding: 1rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+    color: #333;
+    width: 100%;
+}
+
+.company-login-input-group input::placeholder {
+    color: #999;
+    font-size: 1rem;
+}
+
+.company-login-input-group input:focus {
+    outline: none;
+    border-color: #0057b7;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 87, 183, 0.1);
+}
+
+.company-login-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #0057b7;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.company-login-button:hover {
+    background-color: #004494;
+}
+
+.demo-login-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: transparent;
+    color: #0057b7;
+    border: 1px solid #0057b7;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+}
+
+.demo-login-button:hover {
+    background-color: rgba(0, 87, 183, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 87, 183, 0.15);
+}
+
+.company-login-signup {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+}
+
+.company-login-signup span {
+    color: #0057b7;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 0.3rem;
+    text-decoration: none;
+}
+
+.company-login-signup span:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.alert-danger {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+@media (max-width: 1200px) {
+    .company-login-card {
+        width: 80%;
+    }
+    
+    .company-login-image {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .company-login-container {
+        flex-direction: column;
+    }
+
+    .company-login-left {
+        width: 100%;
+        min-height: 25vh;
+        padding: 0;
+    }
+
+    .company-login-right {
+        width: 100%;
+        min-height: 75vh;
+        padding: 1rem;
+    }
+
+    .company-login-card {
+        width: 90%;
+        max-width: 400px;
+        padding: 2rem;
+    }
+    
+    .company-login-image {
+        width: 90%;
+        max-width: 400px;
+    }
+}

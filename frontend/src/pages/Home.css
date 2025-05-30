@@ -1,0 +1,452 @@
+:root {
+  --primary-color: #0057b7; /* LiveHire blue from the screenshot */
+  --secondary-color: #f8f9fa;
+  --text-color: #333;
+  --white: #ffffff;
+  --light-gray: #f4f4f4;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header/Navigation */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.logo a {
+  color: #0057b7;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+}
+
+.navigation ul li {
+  margin-left: 2rem;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+}
+
+.navigation ul li:hover {
+  color: #0057b7;
+}
+
+.home-login-button {
+  background-color: #0057b7;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  border: none;
+  display: inline-block;
+}
+
+.home-login-button:hover {
+  background-color: #004494;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+#hero {
+  padding: 4rem 5%;
+  background-color: #f8f9fa;
+  width: 100%;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.hero-container h1 {
+  flex: 1;
+  white-space: nowrap;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  max-width: 50%;
+  text-overflow: wrap;
+}
+
+.hero-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: none;
+  margin-right: 100px;
+  margin-left: 250px;
+}
+
+.main-hero {
+  width: 190%;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.main-hero:hover {
+  transform: scale(1.05);
+}
+
+.text {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.bold-blue {
+  font-weight: bold;
+  color: #0056b3;
+}
+
+/* Why LIVEHIRE Section */
+#why-livehire {
+  padding: 5rem 5%;
+  background-color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.section-title {
+  color: #0057b7;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  
+}
+
+.why-livehire-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.why-livehire-text {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 3rem;
+  line-height: 1.3;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-livehire-text .bold {
+  font-weight: bold;
+  color: #333;
+}
+
+.interview-interface {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.interview-interface img {
+  width: 100%;
+  height: auto;
+  /* border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+}
+
+/* Benefits Section */
+#benefits {
+  padding: 5rem 5%;
+  background-color: #f8f9fa;
+  width: 100%;
+}
+
+.benefits-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 0 20px;
+}
+
+.benefit-item {
+  background-color: #0057b7;
+  color: white;
+  padding: 1.5rem 2rem;
+  margin-top: 12px;
+  border-radius: 12px;
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.benefit-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 87, 183, 0.2);
+  background-color: #0046a1;
+}
+
+.benefit-item h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.features-title {
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+}
+
+.features-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 0 20px;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  max-width: 350px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 4rem;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+}
+
+.feature-card h3 {
+  color: #0057b7;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Contact Section */
+#contact-us {
+  padding: 5rem 5%;
+  background-color: white;
+  width: 100%;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #0057b7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #004494;
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  padding: 4rem 5%;
+  color: white;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-heading {
+  color: #facc15;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.footer-title {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 1rem;
+}
+
+.footer-list a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-list a:hover {
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-link {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: white;
+}
+
+.footer-bottom {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #374151;
+  text-align: center;
+  color: #9ca3af;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .home-container {
+    overflow-x: hidden;
+  }
+  
+  .benefits-container,
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit-item,
+  .feature-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .why-livehire-text {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

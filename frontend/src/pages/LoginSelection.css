@@ -1,0 +1,222 @@
+/* LoginSelection.css */
+:root {
+  --primary-color: #0057b7; /* LiveHire blue from the screenshot */
+  --secondary-color: #f8f9fa;
+  --text-color: #333;
+  --white: #ffffff;
+  --light-gray: #f4f4f4;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-selection-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  overflow-x: hidden;
+}
+
+/* Header/Navigation */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.logo a {
+  color: #0057b7;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+}
+
+.navigation ul li {
+  margin-left: 2rem;
+}
+
+.navigation ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navigation ul li a:hover {
+  color: #0057b7;
+}
+
+.login-selection-content {
+  flex: 1;
+  padding: 4rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.login-header h1 {
+  font-size: 2.5rem;
+  color: #1c2b46;
+  margin-bottom: 1rem;
+}
+
+.login-header p {
+  font-size: 1.2rem;
+  color: #5f6368;
+}
+
+.login-cards-container {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.login-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+.card-header {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.card-header h2 {
+  font-size: 1.8rem;
+  color: #1c2b46;
+  margin-bottom: 0;
+}
+
+.login-card .card-header .badge,
+.login-card .card-header .badge.highlight {
+  display: inline-block !important;
+  padding: 0.2rem 0.5rem !important;
+  background: #f1ce8b !important;
+  color: #333 !important;
+  border-radius: 12px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  width: fit-content !important;
+  margin-top: 0 !important;
+}
+
+.login-card p {
+  color: #5f6368;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.features-list li {
+  color: #3c4043;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.features-list li::before {
+  content: "✓";
+  color: #34a853;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.login-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.interviewer-button {
+  background-color: #0057b7;
+  color: white;
+}
+
+.interviewer-button:hover {
+  background-color: #004494;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 87, 183, 0.2);
+}
+
+.company-button {
+  background-color: #0057b7;
+  color: white;
+}
+
+.company-button:hover {
+  background-color: #004494;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 87, 183, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-selection-container {
+    padding: 1rem;
+  }
+
+  .login-header h1 {
+    font-size: 2rem;
+  }
+
+  .login-card {
+    min-width: 100%;
+  }
+
+  .login-cards-container {
+    flex-direction: column;
+  }
+} 

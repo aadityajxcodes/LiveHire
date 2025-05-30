@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiveHire - Technical Interview Platform</title>
+    <script>
+      // Fake media for testing - enable fake devices for development
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        // For Chrome: enable fake media devices
+        navigator.mediaDevices.getUserMedia = async (constraints) => {
+          // Only create fake media if there's an actual error accessing devices
+          try {
+            return await window.originalGetUserMedia(constraints);
+          } catch (err) {
+            console.log('Using fake media stream for testing');
+            
+            // Create a fake audio context and oscillator for audio
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioCtx.createOscillator();
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // A4 note
+            const dest = audioCtx.createMediaStreamDestination();
+            oscillator.connect(dest);
+            oscillator.start();
+            const audioTrack = dest.stream.getAudioTracks()[0];
+            
+            // Create a fake canvas for video
+            const canvas = document.createElement('canvas');
+            canvas.width = 640;
+            canvas.height = 480;
+            const ctx = canvas.getContext('2d');
+            
+            // Draw a pattern on the canvas
+            ctx.fillStyle = '#008CBA';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.font = '30px Arial';
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.fillText('Fake Camera Feed', canvas.width/2, canvas.height/2);
+            
+            const stream = canvas.captureStream();
+            
+            // Only add tracks that were requested in constraints
+            const result = new MediaStream();
+            if (constraints.audio) result.addTrack(audioTrack);
+            if (constraints.video) stream.getVideoTracks().forEach(track => result.addTrack(track));
+            
+            return result;
+          }
+        };
+        
+        // Store original method
+        window.originalGetUserMedia = navigator.mediaDevices.getUserMedia;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html> 

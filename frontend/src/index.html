@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiveHire - Technical Interview Platform</title>
+    <script>
+      // Enable fake media devices for testing
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        // Store the original getUserMedia function
+        navigator.mediaDevices.originalGetUserMedia = navigator.mediaDevices.getUserMedia;
+        
+        // Override getUserMedia with a version that provides fake media if real devices fail
+        navigator.mediaDevices.getUserMedia = async function(constraints) {
+          try {
+            // First try to get real media
+            return await navigator.mediaDevices.originalGetUserMedia(constraints);
+          } catch (err) {
+            console.log('Using fake media for testing:', err);
+            
+            // Create fake stream with fake tracks
+            const stream = new MediaStream();
+            
+            // Add fake audio track if audio was requested
+            if (constraints.audio) {
+              const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+              const oscillator = audioContext.createOscillator();
+              oscillator.frequency.setValueAtTime(440, audioContext.currentTime); // A4 note
+              const destination = audioContext.createMediaStreamDestination();
+              oscillator.connect(destination);
+              oscillator.start();
+              stream.addTrack(destination.stream.getAudioTracks()[0]);
+            }
+            
+            // Add fake video track if video was requested
+            if (constraints.video) {
+              const canvas = document.createElement('canvas');
+              canvas.width = 640;
+              canvas.height = 480;
+              
+              // Draw something on the canvas
+              const ctx = canvas.getContext('2d');
+              
+              // Animation function to make the fake video look alive
+              function drawFakeVideo() {
+                // Clear canvas
+                ctx.fillStyle = '#1a73e8';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw text
+                ctx.fillStyle = 'white';
+                ctx.font = '30px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('Fake Camera', canvas.width/2, canvas.height/2 - 20);
+                
+                // Draw time to show movement
+                const now = new Date();
+                ctx.fillText(now.toLocaleTimeString(), canvas.width/2, canvas.height/2 + 30);
+                
+                // Schedule next frame
+                setTimeout(drawFakeVideo, 1000);
+              }
+              
+              // Start animation
+              drawFakeVideo();
+              
+              // Add video track from canvas
+              stream.addTrack(canvas.captureStream(25).getVideoTracks()[0]);
+            }
+            
+            return stream;
+          }
+        };
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html> 

@@ -1,0 +1,284 @@
+/* .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+}
+
+.steps {
+  width: 30%;
+  background: #2e2e2e;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.step {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #444;
+  border-radius: 5px;
+}
+
+.step.active {
+  background: black;
+  color: white;
+}
+
+.form-container {
+  width: 65%;
+  background: #2e2e2e;
+  padding: 20px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.experience {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.experience button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+
+/* InterviewerLogin.css */
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #0077b5;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #005fa3;
+} */
+
+
+
+
+
+.interviewer-login-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.interviewer-login-left {
+  flex: 1;
+  background: #0056b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.interviewer-login-image {
+  width: 80%;
+  max-width: 400px;
+  object-fit: contain;
+}
+
+.interviewer-login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.interviewer-login-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 2rem;
+}
+
+.interviewer-login-form-container {
+  text-align: center;
+}
+
+.interviewer-login-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #0056b3;
+}
+
+.interviewer-login-input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.interviewer-login-input-group label {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.interviewer-login-input-group input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.interviewer-login-input-group input:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+.interviewer-login-button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.interviewer-login-button:hover {
+  background-color: #004494;
+}
+
+.interviewer-login-signup {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.interviewer-login-signup span {
+  color: #0056b3;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 0.3rem;
+}
+
+.interviewer-login-signup span:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .interviewer-login-container {
+    flex-direction: column;
+  }
+
+  .interviewer-login-left {
+    min-height: 30vh;
+  }
+
+  .interviewer-login-right {
+    min-height: 70vh;
+  }
+
+  .interviewer-login-card {
+    margin: 1rem;
+  }
+}
