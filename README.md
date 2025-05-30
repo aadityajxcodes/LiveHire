@@ -8,11 +8,11 @@ LiveHire is a platform where companies can hire experienced interviewers to cond
 - A dashboard for both roles to manage interviews
 - A coding editor for live coding rounds
 - A video calling interface for live interviews
-- An automated report generation system for interview evaluations
+- Report generation system for interview evaluations
 
 ## Tech Stack
 
-- **Frontend**: React, Material-UI, Socket.io Client, Monaco Editor
+- **Frontend**: React, Socket.io Client, Monaco Editor
 - **Backend**: Node.js, Express, Socket.io
 - **Database**: MongoDB
 - **Authentication**: JWT
